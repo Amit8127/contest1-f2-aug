@@ -31,11 +31,8 @@ function addData() {
 
 function removeAdmin() {
   //Write your code here, just console.log
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i]["profession"] == "admin") {
-      arr.pop(arr[i]);
-    }
-  }
+  arr = arr.filter(arr => arr.profession !== "admin");
+
   console.log(arr);
 }
 
@@ -44,10 +41,10 @@ function concatenateArray() {
   let newArr = [
     { id: 1, name: 'john', age: 18, profession: 'developer' },
     { id: 2, name: 'jack', age: 20, profession: 'developer' },
-    { id: 3, name: 'karen', age: 19, profession: 'admin' },
+    { id:4, name: 'susan', age: 20, profession: 'intern'},
   ];
 
-  arr.push(newArr);
+  arr = arr.concat(newArr);
   console.log(arr);
 
 }
